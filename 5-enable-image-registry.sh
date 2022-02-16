@@ -17,12 +17,12 @@ metadata:
   namespace: openshift-image-registry
 spec:
   accessModes:
-    - ReadWriteMany
+  - ReadWriteMany
+  volumeMode: Filesystem
   resources:
     requests:
       storage: 1490Gi
-  storageClassName: default
-  volumeMode: Filesystem
+  storageClassName: ocs-storagecluster-cephfs
 
 EOF
 echo Create volume set
